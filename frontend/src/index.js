@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-
+import Home from './routes/Home';
 import About from './routes/About';
 import Specialty from './routes/Specialty';
 import ErrorPage from './routes/ErrorPage';
@@ -21,6 +21,10 @@ const router = createBrowserRouter([
     element:<App />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/",
+        element:<Home />
+      },
       {
         path: "/about",
         element:<About />
